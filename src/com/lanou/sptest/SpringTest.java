@@ -11,6 +11,7 @@ public class SpringTest {
 
 	@Test
 	public void myTest() {
+	
 
 		// 1.不使用spring下的对象创建
 		// Car car = new Car();

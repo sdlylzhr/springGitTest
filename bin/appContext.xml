@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:aop="http://www.springframework.org/schema/aop"
+xmlns:tx="http://www.springframework.org/schema/tx"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="
+       http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/tx 
+       http://www.springframework.org/schema/tx/spring-tx.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop 
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+   
+   
+   <!-- <bean id="car1" class="com.lanou.bean.Car">
+   		<property name="name" value="李四"></property>
+   		<property name="num" value="22"></property>
+   		<property name="brand" value="奔驰"></property>
+   </bean> -->
+   
+   <!-- 利用构造函数创建bean -->
+   <bean id="car2" class="com.lanou.bean.Car">
+   		<constructor-arg type="java.lang.String" value="wangwu"></constructor-arg>
+   		<constructor-arg type="java.lang.Integer" value="333"></constructor-arg>
+      	<constructor-arg type="java.lang.String" value="QQ"></constructor-arg>
+   </bean>
+   
+   <!-- 不按顺序的构造函数创建bean -->
+   <bean id="car3" class="com.lanou.bean.Car">
+        <constructor-arg index="2" type="java.lang.String" value="QQ"></constructor-arg>
+   		<constructor-arg index="0" type="java.lang.String" value="wangwu"></constructor-arg>
+   		<constructor-arg index="1" type="java.lang.Integer" value="333"></constructor-arg>
+   </bean>
+   
+   <!-- 利用工厂方法构建对象 -->
+   
+   <bean id="carFactory" class="com.lanou.bean.CarFactory"></bean>
+   
+   <bean id="car4" 
+   factory-bean="carFactory" 
+   factory-method="createCar"></bean>
+   
+   <bean id="car5" 
+   class="com.lanou.bean.CarFactory" 
+   factory-method="createStaticCar"></bean>
+   
+   <bean id="person" class="com.lanou.bean.Person">
+   		<property name="car" ref="car2"></property>
+   </bean>
+   
+   
+   
+   
+   
+</beans>
