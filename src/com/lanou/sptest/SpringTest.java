@@ -20,7 +20,7 @@ public class SpringTest {
 //		
 //		System.out.println(car);
 		
-		
+		// kdsjfksdf
 		// 读取appContext配置文件中的信息
 		ApplicationContext aContext = 
 				new ClassPathXmlApplicationContext("appContext.xml");
