@@ -25,10 +25,13 @@ public class SpringTest {
 //		
 //		System.out.println(car);
 		
+		System.out.println("¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş");
 		
 		// è¯»å–appContexté…ç½®æ–‡ä»¶ä¸­çš„ä¿¡æ¯
 		ApplicationContext aContext = 
 				new ClassPathXmlApplicationContext("appContext.xml");
+		
+		System.out.println("¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş");
 		
 //		Car car = (Car) aContext.getBean("car5");
 		
@@ -37,6 +40,8 @@ public class SpringTest {
 		Person person = (Person) aContext.getBean("person");
 		
 		System.out.println(person);
+		
+		System.out.println("¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş¹ş");
 		
 		
 	}
